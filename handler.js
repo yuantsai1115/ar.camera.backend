@@ -164,7 +164,7 @@ module.exports.default = async (event, context, callback) => {
                 await client
                 .postToConnection({
                     ConnectionId: connection.connectionid,
-                    Data: `default route received: ${event.body}.`// ${JSON.stringify(event.requestContext)}`
+                    Data: `${event.body}`
                 })
                 .promise();
             }
